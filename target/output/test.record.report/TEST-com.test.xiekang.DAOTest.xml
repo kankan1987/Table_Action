@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="hh-PC" name="com.test.xiekang.DAOTest" tests="6" time="3.105" timestamp="2012-12-16T15:29:22">
+  <properties>
+    <property name="java.vendor" value="Sun Microsystems Inc." />
+    <property name="target.bin" value="E:\workspace_demo\Table_Action\Table_Action/target/bin" />
+    <property name="src.core.resource.dir" value="E:\workspace_demo\Table_Action\Table_Action/src/main/resources" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="eclipse.pdebuild.templates" value="/E:/Eclipse_Tool/eclipse-jee-juno-SR1-win32-x86_64/eclipse/plugins/org.eclipse.pde.build_3.8.1.v20120725-202643/templates/" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="traget.output.check_report" value="E:\workspace_demo\Table_Action\Table_Action/target/output/checkstyle.report" />
+    <property name="os.name" value="Windows 7" />
+    <property name="sun.boot.class.path" value="D:\Java\jre6\lib\resources.jar;D:\Java\jre6\lib\rt.jar;D:\Java\jre6\lib\sunrsasign.jar;D:\Java\jre6\lib\jsse.jar;D:\Java\jre6\lib\jce.jar;D:\Java\jre6\lib\charsets.jar;D:\Java\jre6\lib\modules\jdk.boot.jar;D:\Java\jre6\classes" />
+    <property name="sun.desktop" value="windows" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="ant.home" value="E:\Eclipse_Tool\eclipse-jee-juno-SR1-win32-x86_64\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730" />
+    <property name="java.runtime.version" value="1.6.0_37-b06" />
+    <property name="traget.output.test_report" value="E:\workspace_demo\Table_Action\Table_Action/target/output/test.record.report" />
+    <property name="user.name" value="kk" />
+    <property name="user.language" value="zh" />
+    <property name="sun.boot.library.path" value="D:\Java\jre6\bin" />
+    <property name="ant.project.name" value="table_action" />
+    <property name="java.version" value="1.6.0_37" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="java.endorsed.dirs" value="D:\Java\jre6\lib\endorsed" />
+    <property name="sun.cpu.isalist" value="amd64" />
+    <property name="sun.jnu.encoding" value="GBK" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="\" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="clover.initstring" value="E:\workspace_demo\Table_Action\Table_Action\target\colver\coverage.db" />
+    <property name="java.class.version" value="50.0" />
+    <property name="user.country" value="CN" />
+    <property name="java.home" value="D:\Java\jre6" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="ant.file" value="E:\workspace_demo\Table_Action\Table_Action\build.xml" />
+    <property name="os.version" value="6.1" />
+    <property name="src.core.test.resource.dir" value="E:\workspace_demo\Table_Action\Table_Action/src/test/resources" />
+    <property name="project_name" value="table_action" />
+    <property name="build.lib.dir" value="E:\workspace_demo\Table_Action\Table_Action/target/lib" />
+    <property name="path.separator" value=";" />
+    <property name="java.vm.version" value="20.12-b01" />
+    <property name="user.variant" value="" />
+    <property name="ant.library.dir" value="E:\Eclipse_Tool\eclipse-jee-juno-SR1-win32-x86_64\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib" />
+    <property name="clover.jar" value="E:\workspace_demo\Table_Action\Table_Action\lib\clover.jar" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="build.target.dir" value="E:\workspace_demo\Table_Action\Table_Action/src/target" />
+    <property name="dependency.lib.dir" value="E:\workspace_demo\Table_Action\Table_Action/lib" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="target.test" value="E:\workspace_demo\Table_Action\Table_Action/target/test" />
+    <property name="eclipse.pdebuild.scripts" value="/E:/Eclipse_Tool/eclipse-jee-juno-SR1-win32-x86_64/eclipse/plugins/org.eclipse.pde.build_3.8.1.v20120725-202643/scripts/" />
+    <property name="user.home" value="C:\Users\kk" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="target.colver" value="E:\workspace_demo\Table_Action\Table_Action/target/colver" />
+    <property name="java.library.path" value="D:\Java\jre6\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\app\kk\product\11.2.0\dbhome_4\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Java\jdk1.6.0_37\bin;D:\Program Files\TortoiseSVN\bin;E:\Apache-Tool\apache-maven-3.0.4\bin;E:\Apache-Tool\apache-ant-1.8.4\bin;." />
+    <property name="java.vendor.url" value="http://java.sun.com/" />
+    <property name="target.output.coverage_report" value="E:\workspace_demo\Table_Action\Table_Action/target/output/coverage.report" />
+    <property name="java.vm.vendor" value="Sun Microsystems Inc." />
+    <property name="ant.file.table_action" value="E:\workspace_demo\Table_Action\Table_Action\build.xml" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.test.xiekang.DAOTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,E:\workspace_demo\Table_Action\Table_Action\target\output\test.record.report\TEST-com.test.xiekang.DAOTest.xml crashfile=E:\workspace_demo\Table_Action\Table_Action\junitvmwatcher2317679804642537828.properties propsfile=E:\workspace_demo\Table_Action\Table_Action\junit254885239397287776.properties" />
+    <property name="java.class.path" value="E:\workspace_demo\Table_Action\Table_Action\lib\antlr-2.7.6.jar;E:\workspace_demo\Table_Action\Table_Action\lib\asm.jar;E:\workspace_demo\Table_Action\Table_Action\lib\c3p0-0.9.1.jar;E:\workspace_demo\Table_Action\Table_Action\lib\cglib-2.1.3.jar;E:\workspace_demo\Table_Action\Table_Action\lib\checkstyle-5.3-all.jar;E:\workspace_demo\Table_Action\Table_Action\lib\clover.jar;E:\workspace_demo\Table_Action\Table_Action\lib\commons-collections-3.2.1.jar;E:\workspace_demo\Table_Action\Table_Action\lib\commons-lang-2.4.jar;E:\workspace_demo\Table_Action\Table_Action\lib\commons-logging-1.1.1.jar;E:\workspace_demo\Table_Action\Table_Action\lib\dom4j-1.6.1.jar;E:\workspace_demo\Table_Action\Table_Action\lib\hibernate3.jar;E:\workspace_demo\Table_Action\Table_Action\lib\jta.jar;E:\workspace_demo\Table_Action\Table_Action\lib\junit-4.5.jar;E:\workspace_demo\Table_Action\Table_Action\lib\mysqljdbc.jar;E:\workspace_demo\Table_Action\Table_Action\lib\spring-aop-3.0.6.RELEASE.jar;E:\workspace_demo\Table_Action\Table_Action\lib\spring-asm-3.0.6.RELEASE.jar;E:\workspace_demo\Table_Action\Table_Action\lib\spring-beans-3.0.6.RELEASE.jar;E:\workspace_demo\Table_Action\Table_Action\lib\spring-context-3.0.6.RELEASE.jar;E:\workspace_demo\Table_Action\Table_Action\lib\spring-context-support-3.0.6.RELEASE.jar;E:\workspace_demo\Table_Action\Table_Action\lib\spring-core-3.0.6.RELEASE.jar;E:\workspace_demo\Table_Action\Table_Action\lib\spring-expression-3.0.6.RELEASE.jar;E:\workspace_demo\Table_Action\Table_Action\lib\spring-jdbc-3.0.6.RELEASE.jar;E:\workspace_demo\Table_Action\Table_Action\lib\spring-orm-3.0.6.RELEASE.jar;E:\workspace_demo\Table_Action\Table_Action\lib\spring-test-2.5.6.jar;E:\workspace_demo\Table_Action\Table_Action\lib\spring-tx-2.5.6.jar;E:\workspace_demo\Table_Action\Table_Action\lib\spring-web-3.0.6.RELEASE.jar;E:\workspace_demo\Table_Action\Table_Action\lib\spring-webmvc-3.0.6.RELEASE.jar;E:\workspace_demo\Table_Action\Table_Action\lib\spring.jar;E:\workspace_demo\Table_Action\Table_Action\lib\xbean-spring-3.4.3.jar;E:\workspace_demo\Table_Action\Table_Action\target\test;E:\Eclipse_Tool\eclipse-jee-juno-SR1-win32-x86_64\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant-launcher.jar;E:\Eclipse_Tool\eclipse-jee-juno-SR1-win32-x86_64\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant.jar;E:\Eclipse_Tool\eclipse-jee-juno-SR1-win32-x86_64\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant-junit.jar;E:\Eclipse_Tool\eclipse-jee-juno-SR1-win32-x86_64\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.8.3 compiled on February 26 2012" />
+    <property name="src.core.java.dir" value="E:\workspace_demo\Table_Action\Table_Action/src/main/java" />
+    <property name="ant.file.type.table_action" value="file" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="Service Pack 1" />
+    <property name="eclipse.pdebuild.home" value="/E:/Eclipse_Tool/eclipse-jee-juno-SR1-win32-x86_64/eclipse/plugins/org.eclipse.pde.build_3.8.1.v20120725-202643/./" />
+    <property name="java.io.tmpdir" value="C:\Users\kk\AppData\Local\Temp\" />
+    <property name="src.core.test.java.dir" value="E:\workspace_demo\Table_Action\Table_Action/src/test/java" />
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
+    <property name="os.arch" value="amd64" />
+    <property name="clover.jarpath" value="E:\workspace_demo\Table_Action\Table_Action\lib\clover.jar" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="java.ext.dirs" value="D:\Java\jre6\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+    <property name="user.dir" value="E:\workspace_demo\Table_Action\Table_Action" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="basedir" value="E:\workspace_demo\Table_Action\Table_Action" />
+    <property name="ant.java.version" value="1.6" />
+    <property name="ant.core.lib" value="E:\Eclipse_Tool\eclipse-jee-juno-SR1-win32-x86_64\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant.jar" />
+    <property name="file.encoding" value="GBK" />
+    <property name="build.compiler" value="org.apache.tools.ant.taskdefs.CloverCompilerAdapter" />
+    <property name="java.specification.version" value="1.6" />
+    <property name="ant.project.invoked-targets" value="test" />
+  </properties>
+  <testcase classname="com.test.xiekang.DAOTest" name="testDao" time="2.663" />
+  <testcase classname="com.test.xiekang.DAOTest" name="testInsertData" time="0.097" />
+  <testcase classname="com.test.xiekang.DAOTest" name="testDeleteData" time="0.076" />
+  <testcase classname="com.test.xiekang.DAOTest" name="testUpdateData" time="0.109" />
+  <testcase classname="com.test.xiekang.DAOTest" name="testSelectAll" time="0.079" />
+  <testcase classname="com.test.xiekang.DAOTest" name="testData" time="0.02" />
+  <system-out><![CDATA[Hibernate: select kstable0_.ACCBOOKID as ACCBOOKID0_, kstable0_.ACCBOOKNAME as ACCBOOKN2_0_, kstable0_.STOPFLAG as STOPFLAG0_, kstable0_.ETIME as ETIME0_, kstable0_.STIME as STIME0_, kstable0_.ACCBOOkBZ as ACCBOOkBZ0_ from xiekang kstable0_
+Hibernate: select kstable0_.ACCBOOKID as ACCBOOKID0_, kstable0_.ACCBOOKNAME as ACCBOOKN2_0_, kstable0_.STOPFLAG as STOPFLAG0_, kstable0_.ETIME as ETIME0_, kstable0_.STIME as STIME0_, kstable0_.ACCBOOkBZ as ACCBOOkBZ0_ from xiekang kstable0_
+????7
+Hibernate: insert into xiekang (ACCBOOKNAME, STOPFLAG, ETIME, STIME, ACCBOOkBZ) values (?, ?, ?, ?, ?)
+Hibernate: select kstable0_.ACCBOOKID as ACCBOOKID0_, kstable0_.ACCBOOKNAME as ACCBOOKN2_0_, kstable0_.STOPFLAG as STOPFLAG0_, kstable0_.ETIME as ETIME0_, kstable0_.STIME as STIME0_, kstable0_.ACCBOOkBZ as ACCBOOkBZ0_ from xiekang kstable0_ where accbookname='test'
+Hibernate: insert into xiekang (ACCBOOKNAME, STOPFLAG, ETIME, STIME, ACCBOOkBZ) values (?, ?, ?, ?, ?)
+Hibernate: select kstable0_.ACCBOOKID as ACCBOOKID0_, kstable0_.ACCBOOKNAME as ACCBOOKN2_0_, kstable0_.STOPFLAG as STOPFLAG0_, kstable0_.ETIME as ETIME0_, kstable0_.STIME as STIME0_, kstable0_.ACCBOOkBZ as ACCBOOkBZ0_ from xiekang kstable0_ where accbookname='test'
+Hibernate: delete from xiekang where ACCBOOKID=?
+Hibernate: select kstable0_.ACCBOOKID as ACCBOOKID0_, kstable0_.ACCBOOKNAME as ACCBOOKN2_0_, kstable0_.STOPFLAG as STOPFLAG0_, kstable0_.ETIME as ETIME0_, kstable0_.STIME as STIME0_, kstable0_.ACCBOOkBZ as ACCBOOkBZ0_ from xiekang kstable0_ where accbookname='test1'
+Hibernate: insert into xiekang (ACCBOOKNAME, STOPFLAG, ETIME, STIME, ACCBOOkBZ) values (?, ?, ?, ?, ?)
+Hibernate: select kstable0_.ACCBOOKID as ACCBOOKID0_, kstable0_.ACCBOOKNAME as ACCBOOKN2_0_, kstable0_.STOPFLAG as STOPFLAG0_, kstable0_.ETIME as ETIME0_, kstable0_.STIME as STIME0_, kstable0_.ACCBOOkBZ as ACCBOOkBZ0_ from xiekang kstable0_ where accbookname='test'
+Hibernate: select kstable0_.ACCBOOKID as ACCBOOKID0_, kstable0_.ACCBOOKNAME as ACCBOOKN2_0_, kstable0_.STOPFLAG as STOPFLAG0_, kstable0_.ETIME as ETIME0_, kstable0_.STIME as STIME0_, kstable0_.ACCBOOkBZ as ACCBOOkBZ0_ from xiekang kstable0_ where accbookid=10
+Hibernate: insert into xiekang (ACCBOOKNAME, STOPFLAG, ETIME, STIME, ACCBOOkBZ) values (?, ?, ?, ?, ?)
+Hibernate: select kstable0_.ACCBOOKID as ACCBOOKID0_, kstable0_.ACCBOOKNAME as ACCBOOKN2_0_, kstable0_.STOPFLAG as STOPFLAG0_, kstable0_.ETIME as ETIME0_, kstable0_.STIME as STIME0_, kstable0_.ACCBOOkBZ as ACCBOOkBZ0_ from xiekang kstable0_
+Hibernate: insert into xiekang (ACCBOOKNAME, STOPFLAG, ETIME, STIME, ACCBOOkBZ) values (?, ?, ?, ?, ?)
+]]></system-out>
+  <system-err><![CDATA[2012-12-16 23:29:22 org.springframework.test.AbstractSingleSpringContextTests loadContextLocations
+信息: Loading context for locations: classpath:persistence-context.xml
+2012-12-16 23:29:23 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [persistence-context.xml]
+2012-12-16 23:29:23 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing org.springframework.context.support.GenericApplicationContext@79a5f739: startup date [Sun Dec 16 23:29:23 CST 2012]; root of context hierarchy
+2012-12-16 23:29:23 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@16f8f7db: defining beans [dataSource,hibernateProperties,SessionFactory,xieKangDAO,transactionManager,xieKangDAOProxy]; root of factory hierarchy
+2012-12-16 23:29:23 com.mchange.v2.log.MLog <clinit>
+信息: MLog clients using java 1.4+ standard logging.
+2012-12-16 23:29:23 com.mchange.v2.c3p0.C3P0Registry banner
+信息: Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2012-12-16 23:29:23 org.springframework.core.io.support.PropertiesLoaderSupport loadProperties
+信息: Loading properties file from class path resource [hibernate.properties]
+2012-12-16 23:29:23 org.hibernate.cfg.Environment <clinit>
+信息: Hibernate 3.2.5
+2012-12-16 23:29:23 org.hibernate.cfg.Environment <clinit>
+信息: loaded properties from resource hibernate.properties: {hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect, hibernate.show_sql=true, hibernate.bytecode.use_reflection_optimizer=false, hibernate.hbm2ddl.auto=update}
+2012-12-16 23:29:23 org.hibernate.cfg.Environment buildBytecodeProvider
+信息: Bytecode provider name : cglib
+2012-12-16 23:29:23 org.hibernate.cfg.Environment <clinit>
+信息: using JDK 1.4 java.sql.Timestamp handling
+2012-12-16 23:29:23 org.hibernate.cfg.HbmBinder bindRootPersistentClassCommonValues
+信息: Mapping class: com.ygsoft.xiekang.model.Kstable -> xiekang
+2012-12-16 23:29:23 org.springframework.orm.hibernate3.LocalSessionFactoryBean buildSessionFactory
+信息: Building new Hibernate SessionFactory
+2012-12-16 23:29:23 org.hibernate.connection.ConnectionProviderFactory newConnectionProvider
+信息: Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2012-12-16 23:29:23 com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource getPoolManager
+信息: Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1388r19lhh1exb7ko2|1f3785d3, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1388r19lhh1exb7ko2|1f3785d3, idleConnectionTestPeriod -> 0, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/test, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 300, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: RDBMS: MySQL, version: 5.5.27
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.6 ( Revision: ${svn.Revision} )
+2012-12-16 23:29:24 org.hibernate.dialect.Dialect <init>
+信息: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2012-12-16 23:29:24 org.hibernate.transaction.TransactionFactoryFactory buildTransactionFactory
+信息: Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2012-12-16 23:29:24 org.hibernate.transaction.TransactionManagerLookupFactory getTransactionManagerLookup
+信息: No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Automatic flush during beforeCompletion(): disabled
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Automatic session close at end of transaction: disabled
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: JDBC batch size: 15
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: JDBC batch updates for versioned data: disabled
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Scrollable result sets: enabled
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: JDBC3 getGeneratedKeys(): enabled
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Connection release mode: auto
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Maximum outer join fetch depth: 2
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Default batch fetch size: 1
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Generate SQL with comments: disabled
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Order SQL updates by primary key: disabled
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Order SQL inserts for batching: disabled
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory createQueryTranslatorFactory
+信息: Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2012-12-16 23:29:24 org.hibernate.hql.ast.ASTQueryTranslatorFactory <init>
+信息: Using ASTQueryTranslatorFactory
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Query language substitutions: {}
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: JPA-QL strict compliance: disabled
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Second-level cache: enabled
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Query cache: disabled
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory createCacheProvider
+信息: Cache provider: org.hibernate.cache.NoCacheProvider
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Optimize cache for minimal puts: disabled
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Structured second-level cache entries: disabled
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Echoing all SQL to stdout
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Statistics: disabled
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Deleted entity synthetic identifier rollback: disabled
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Default entity-mode: pojo
+2012-12-16 23:29:24 org.hibernate.cfg.SettingsFactory buildSettings
+信息: Named query checking : enabled
+2012-12-16 23:29:24 org.hibernate.impl.SessionFactoryImpl <init>
+信息: building session factory
+2012-12-16 23:29:25 org.hibernate.impl.SessionFactoryObjectFactory addInstance
+信息: Not binding factory to JNDI, no JNDI name configured
+2012-12-16 23:29:25 org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+信息: Running hbm2ddl schema update
+2012-12-16 23:29:25 org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+信息: fetching database metadata
+2012-12-16 23:29:25 org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+信息: updating schema
+2012-12-16 23:29:25 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+信息: table found: test.xiekang
+2012-12-16 23:29:25 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+信息: columns: [accbookid, accbookbz, accbookname, stime, etime, stopflag]
+2012-12-16 23:29:25 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+信息: foreign keys: []
+2012-12-16 23:29:25 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+信息: indexes: [primary]
+2012-12-16 23:29:25 org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+信息: schema update complete
+2012-12-16 23:29:25 org.springframework.orm.hibernate3.HibernateTransactionManager afterPropertiesSet
+信息: Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge1388r19lhh1exb7ko2|1f3785d3, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge1388r19lhh1exb7ko2|1f3785d3, idleConnectionTestPeriod -> 0, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/test, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 300, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+]]></system-err>
+</testsuite>

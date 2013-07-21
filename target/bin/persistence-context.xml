@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:util="http://www.springframework.org/schema/util"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                           http://www.springframework.org/schema/util 
+                           http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+  <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+    <property name="driverClass" value="com.mysql.jdbc.Driver" />
+    <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/soaware_license" />
+    <property name="user" value="root" />
+    <property name="password" value="root" />
+    <property name="initialPoolSize" value="1" />
+    <property name="minPoolSize" value="1" />
+    <property name="acquireIncrement" value="5" />
+    <property name="maxPoolSize" value="20" />
+    <property name="maxIdleTime" value="300" />
+    <property name="loginTimeout" value="500" />
+  </bean>
+  <bean id="hibernateProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+    <property name="location" value="classpath:hibernate.properties" />
+  </bean>
+  <bean id="SessionFactory" class="org.springframework.orm.hibernate.LocalSessionFactoryBean">
+    <property name="dataSource">
+      <ref local="dataSource"></ref>
+    </property>
+    <property name="hibernateProperties">
+      <props>
+        <prop key="hibernate.dialect">net.sf.hibernate.dialect.OracleDialect</prop>
+        <prop key="hibernate.show_sql">true</prop>
+      </props>
+    </property>
+    <property name="mappingResources">
+      <list>
+        <value>com/ygsoft/xiekang/model/Kstable.hbm.xml</value>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="xieKangDAO" class="com.ygsoft.model.XiekangDAOImp">
+    <property name="sessionFactory">
+      <ref bean="SessionFactory"></ref>
+    </property>
+  </bean>
+  <bean id="transactionManager" class="org.springframework.orm.hibernate.HibernateTransactionManager">
+    <property name="sessionFactory">
+      <ref local="SessionFactory"></ref>
+    </property>
+  </bean>
+  <bean id="xieKangDAOProxy" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+    <property name="transactionManager">
+      <ref bean="transactionManager"></ref>
+    </property>
+    <property name="target">
+      <ref local="xieKangDAO"></ref>
+    </property>
+    <property name="transactionAttributes">
+      <props>
+        <prop key="show*">PROPAGATION_REQUIRED</prop>
+      </props>
+    </property>
+  </bean>
+</beans>

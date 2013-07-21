@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ygsoft.license.model">
+  <class name="Kstable" table="xiekang">
+    <id column="ACCBOOKID" name="accBookId">
+      <generator class="native" />
+    </id>
+    <property column="ACCBOOKNAME" generated="never" length="36" name="accBookName" not-null="true" type="string" update="false" />
+    <property column="STOPFLAG" generated="never" length="36" name="stopFlag" not-null="true" type="string" update="false" />
+    <property column="ETIME" generated="never" name="eTime" not-null="true" type="calendar" />
+    <property column="STIME" generated="never" name="sTime" not-null="true" type="calendar" />
+    <property column="ACCBOOkBZ" generated="never" length="36" name="AccBookBz" not-null="true" type="integer" update="false" />
+  </class>
+</hibernate-mapping>

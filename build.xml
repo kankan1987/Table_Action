@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="table_action" default="" basedir=".">
+	<description>soaware 3.5 automatic build script</description>
+	<property name="project_name" value="table_action"/>
+	<!--设置资源文件路径-->
+	<property name="build.target.dir" value="${basedir}/src/target" />
+	<property name="src.core.resource.dir" value="${basedir}/src/main/resources" />
+	<property name="src.core.java.dir" value="${basedir}/src/main/java" />
+	<property name="src.core.test.resource.dir" value="${basedir}/src/test/resources" />
+	<property name="src.core.test.java.dir" value="${basedir}/src/test/java" />
+	<property name="dependency.lib.dir" value="${basedir}/lib" />
+
+	<property name="build.lib.dir" value="${basedir}/target/lib" />
+	<property name="target.bin" value="${basedir}/target/bin" />
+	<property name="target.test" value="${basedir}/target/test" />
+	<property name="target.colver" value="${basedir}/target/colver" />
+	<property name="traget.output.check_report" value="${basedir}/target/output/checkstyle.report" />
+	<property name="target.output.coverage_report" value="${basedir}/target/output/coverage.report" />
+	<property name="traget.output.test_report" value="${basedir}/target/output/test.record.report" />
+	
+	<target name = "build" depends = "clean,compile" />
+	<target name = "test" depends = "clean,with.clover,compile.test,junit.test,clover.report,checkstyle.report" />
+	<target name="A0">
+		<echo>00000000000000</echo>
+	</target>
+	<target name="A1">
+		<echo>11111111111111</echo>
+	</target>
+	<target name="A2" depends = "A1,A0">
+		<echo>222222222222222222</echo>
+	</target>
+	<target name="A3" depends = "A1,A2">
+		<echo>33333333333333333</echo>
+	</target>
+
+
+	<target name="clean" description="removes all generated files">
+		<delete dir="${build.target.dir}" />
+		<mkdir dir="${build.target.dir}" />
+	</target>
+	
+	<path id="classpath">
+		<fileset dir="${dependency.lib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+		<pathelement location="${target.bin}" />
+	</path>
+	
+	<path id="test.classpath">
+		<fileset dir="${dependency.lib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+		<pathelement location="${target.test}" />
+	</path>
+	
+	
+	<target name="compile">
+		<mkdir dir="${target.bin}" />
+		<javac srcdir="${src.core.java.dir}" destdir="${target.bin}" includeantruntime="yes" source="1.5" target="1.5" debug="on" encoding="utf-8">
+			<classpath refid="classpath" />
+		</javac>
+		<copy todir="${target.bin}">
+			<fileset dir="${src.core.java.dir}" excludes="**/*.java" />
+			<fileset dir="${src.core.resource.dir}" includes="*.*"/>
+		</copy>
+	</target>
+
+
+	<target name="compile_test">
+		<delete dir="${target.test}" />
+		<mkdir dir="${target.test}" />
+		<delete dir="${traget.output.test_report}" />
+		<mkdir dir="${traget.output.test_report}" />
+		<javac srcdir="${src.core.java.dir}" destdir="${target.test}" includeantruntime="yes" source="1.5" target="1.5" debug="on" encoding="utf-8">
+			<classpath refid="classpath" />
+		</javac>
+		<copy todir="${target.test}">
+			<fileset dir="${src.core.java.dir}" excludes="**/*.java" />
+			<fileset dir="${src.core.resource.dir}" includes="*.*"/>
+		</copy>
+	</target>
+
+	<target name="compile.test" depends="compile_test">
+		<javac srcdir="${src.core.test.java.dir}" destdir="${target.test}" includeantruntime="yes" source="1.5" target="1.5" debug="on" encoding="utf-8">
+			<classpath refid="test.classpath" />
+		</javac>
+		<copy todir="${target.test}">
+			<fileset dir="${src.core.test.java.dir}" excludes="**/*.java" />
+			<fileset dir="${src.core.test.resource.dir}" />
+		</copy>
+	</target>
+
+	<!-- =================== -->
+	<!-- ==== 运行测试用例 ===== -->
+	<!-- =================== -->
+	<target name="junit.test" depends="compile.test">
+		<junit printsummary="true" showoutput="true"  fork="true">
+			<classpath>
+				<path refid="test.classpath" />
+			</classpath>
+			<formatter type="xml" />
+			<batchtest fork="true" todir="${traget.output.test_report}">
+				<fileset dir="${target.test}">
+					<exclude name="**/Abstract*.class" />
+					<exclude name="**/_*.class" />
+					<exclude name="**/*_.class" />
+					<exclude name="**/*Tests.class" />
+					<include name="**/*Test.class" />
+				</fileset>
+			</batchtest>
+		</junit>
+	</target>
+
+	<!-- ================== -->
+	<!-- ===== 覆盖率环境  ===== -->
+	<!-- ================== -->
+	<property name="clover.jar" location="${dependency.lib.dir}/clover.jar" />
+	<taskdef resource="cloverlib.xml" classpath="${clover.jar}" />
+	<taskdef resource="cloverjunitlib.xml" classpath="${clover.jar}" />
+	<!-- ================= -->
+	<!-- ==== 覆盖率准备===== -->
+	<!-- ================= -->
+	<target name="with.clover">
+	    <delete dir="${target.colver}" />
+		<mkdir dir="${target.colver}" />
+		<clover-setup initstring="${target.colver}/coverage.db" >
+			<statementContext name="log" regexp="^log\..*" />
+			<statementContext name="iflog" regexp="^if \(log\.is.*" />
+			<methodcontext name="main" regexp="public static void main\(String\[\] args\).*" />
+		</clover-setup>
+	</target>
+
+	<!-- ================= -->
+	<!-- ==== 覆盖率报告===== -->
+	<!-- ================= -->
+	<target name="clover.report">
+		<mkdir dir="${target.output.coverage_report}" />
+		<clover-report initstring="${target.colver}/coverage.db">
+			<current outfile="${target.output.coverage_report}/clover.xml" title="${project_name}" summary="true">
+				<format type="xml" filter="log,iflog,main" />
+				<fileset dir="${src.core.java.dir}" />
+			</current>
+			<current outfile="${target.output.coverage_report}" title="${project_name}" summary="true">
+				<format type="html" filter="log,iflog,main" />
+				<fileset dir="${src.core.java.dir}" />
+			</current>
+		</clover-report>
+	</target>
+	<target name="clover.html">
+		<clover-html-report outdir="clover_html" title="${project_name}" />
+	</target>
+	<target name="clover.pdf">
+		<clover-pdf-report outfile="coverage.pdf" />
+	</target>
+	<target name="clover.xml">
+		<clover-report>
+			<current outfile="coverage.xml">
+				<format type="xml" />
+			</current>
+		</clover-report>
+	</target>
+
+	<!-- ================================== -->
+	<!-- ======== 输出checkstyle 的报告 =========== -->
+	<!-- ================================== -->
+	<target name="checkstyle.report">
+		<delete dir="${traget.output.check_report}" />
+		<mkdir dir="${traget.output.check_report}" />
+		<taskdef resource="checkstyletask.properties" classpath="${dependency.lib.dir}/checkstyle-5.3-all.jar" />
+		<checkstyle config="${dependency.lib.dir}/ygsoft_ii_checks.xml" failureProperty="checkstyle.failure" failOnViolation="false">
+			<formatter type="xml" tofile="${traget.output.check_report}/checkstyle.xml" />
+			<fileset dir="${src.core.java.dir}" >
+				<exclude name="**/*.java" />
+			</fileset>
+		</checkstyle>
+		<!--  
+		<style in="${traget.output.check_report}/checkstyle.xml" out="${traget.output.check_report}/checkstyle.xml" style="${dependency.lib.dir}/checkstyle.xsl" />
+		-->
+	</target>
+	
+</project>
+

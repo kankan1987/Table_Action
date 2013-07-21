@@ -1,0 +1,7 @@
+/com
+/hibernate.properties
+/log4j.xml
+/main
+/persistence-context.xml
+/target
+/test

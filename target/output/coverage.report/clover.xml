@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1355671766658" clover="2.6.3">
+   <project timestamp="1355671766052" name="table_action">
+      <metrics conditionals="0" methods="19" classes="3" files="3" packages="2" coveredstatements="20" complexity="19" loc="116" ncloc="91" coveredmethods="17" coveredconditionals="0" statements="22" coveredelements="37" elements="41"/>
+      <package name="com.ygsoft.xiekang.dao">
+         <metrics conditionals="0" methods="6" classes="2" files="2" coveredstatements="8" complexity="6" loc="61" ncloc="40" coveredmethods="5" coveredconditionals="0" statements="9" coveredelements="13" elements="15"/>
+      </package>
+      <package name="com.ygsoft.xiekang.model">
+         <metrics conditionals="0" methods="13" classes="1" files="1" coveredstatements="12" complexity="13" loc="55" ncloc="51" coveredmethods="12" coveredconditionals="0" statements="13" coveredelements="24" elements="26"/>
+      </package>
+   </project>
+   <testproject timestamp="1355671766052" name="table_action">
+      <metrics conditionals="0" methods="0" classes="0" files="0" packages="0" coveredstatements="0" complexity="0" loc="0" ncloc="0" coveredmethods="0" coveredconditionals="0" statements="0" coveredelements="0" elements="0"/>
+   </testproject>
+</coverage>

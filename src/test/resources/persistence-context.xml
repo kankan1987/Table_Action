@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN/EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/test" />
+		<property name="user" value="root" />
+		<property name="password" value="root" />
+		<property name="initialPoolSize" value="1" />
+		<property name="minPoolSize" value="1" />
+		<property name="acquireIncrement" value="5" />
+		<property name="maxPoolSize" value="20" />
+		<property name="maxIdleTime" value="300" />
+		<property name="loginTimeout" value="500" />
+	</bean>
+	<!-- jndi 连接
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean"> 
+		<property name="jndiName"> <value>java:comp/env/jdbc/test</value> </property> 
+	</bean>
+    -->
+	<bean id="hibernateProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="location" value="classpath:hibernate.properties" />
+	</bean>
+	<bean id="SessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref local="dataSource"></ref>
+		</property>
+		<property name="hibernateProperties">
+			<ref local="hibernateProperties"></ref>
+		</property>
+		<!--<property name="configLocation" value="classpath:hibernate.cfg.xml" 
+			/> -->
+		<property name="mappingResources">
+			<list>
+				<value>com/ygsoft/xiekang/model/Kstable.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean name="xieKangDAO" id="xieKangDAO" class="com.ygsoft.xiekang.dao.XiekangDAOImp">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory"></ref>
+		</property>
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="SessionFactory"></ref>
+		</property>
+	</bean>
+
+	<bean name="xieKangDAOProxy" id="xieKangDAOProxy"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager"></ref>
+		</property>
+		<property name="target">
+			<ref local="xieKangDAO"></ref>
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="sav*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="delete*">PROPAGATION_REQUIRED</prop>
+				<prop key="get*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="show*">PROPAGATION_REQUIRED</prop>
+				<prop key="insert*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>
